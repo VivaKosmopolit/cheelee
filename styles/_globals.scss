@@ -1,0 +1,119 @@
+body {
+  font-family: var(--font-family);
+}
+
+a {
+  color: inherit;
+
+  &[class] {
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-green);
+    }
+  }
+}
+
+$headings: h1, h2, h3, h4, h5, h6;
+
+@each $h in $headings {
+  #{$h} {
+    color: var(--color-gray);
+  }
+
+  #{$h}:has(.accent-green) {
+    span.accent-green {
+      color: var(--color-green);
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.accent-gray {
+  font-weight: 800;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-purple-opacity-20);
+  border: 0.0625rem solid transparent;
+  border-radius: 1.25rem;
+
+  &:hover {
+    border-color: var(--color-green);
+    background-color: var(--color-purple-opacity);
+  }
+}
+
+.button-purple {
+  display: flex;
+  padding: 1.75rem 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  border-radius: 2.5rem;
+  background-color: var(--color-purple);
+  border-color: transparent;
+  color: var(--color-gray);
+}
+
+.rate-rise {
+  clip-path: polygon(50% 20%, 0 75%, 100% 75%);
+  background-color: var(--color-green);
+}
+
+.rate-fall {
+  clip-path: polygon(50% 80%, 0 25%, 100% 25%);
+  background-color: var(--color-red);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: var(--color-dark);
+    cursor: pointer;
+
+    &:after {
+      content: '\25BE';
+      margin-left: 0.25rem;
+    }
+  }
+
+  &__inner {
+    display: none;
+    position: absolute;
+    background-color: var(--color-purple-opacity-20);
+    color: var(--color-white);
+    min-width: 100px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__value {
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-green);
+    }
+  }
+}
+
+.show { display: block; }

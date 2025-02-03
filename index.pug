@@ -1,0 +1,247 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="styles/main.css")
+        title Cheelee
+    body
+        svg(style="display: none;")
+            symbol#icon-discord(viewBox="0 0 37 28" fill="currentColor")
+                path(d="M31.3221 2.32105C28.9638 1.24674 26.4349 0.45523 23.7908 0.00190165C23.7427 -0.00684744 23.6946 0.015017 23.6698 0.0587469C23.3445 0.633057 22.9843 1.38229 22.732 1.97119C19.8881 1.54848 17.0588 1.54848 14.2732 1.97119C14.0209 1.3692 13.6476 0.633057 13.3209 0.0587469C13.2961 0.0164761 13.248 -0.00538839 13.1998 0.00190165C10.5572 0.453781 8.02832 1.24529 5.66861 2.32105C5.64818 2.32979 5.63067 2.34438 5.61905 2.36332C0.822312 9.47818 -0.491715 16.4182 0.152903 23.2721C0.155819 23.3056 0.174779 23.3377 0.20103 23.3581C3.36578 25.6655 6.43138 27.0664 9.44005 27.9949C9.48821 28.0095 9.53922 27.992 9.56987 27.9526C10.2816 26.9877 10.916 25.9702 11.4599 24.9003C11.492 24.8376 11.4614 24.7633 11.3958 24.7385C10.3895 24.3595 9.4313 23.8974 8.50958 23.3727C8.43668 23.3304 8.43084 23.2269 8.49791 23.1773C8.69187 23.033 8.88589 22.8829 9.0711 22.7313C9.10461 22.7036 9.1513 22.6977 9.1907 22.7152C15.246 25.46 21.8015 25.46 27.7854 22.7152C27.8248 22.6963 27.8715 22.7021 27.9064 22.7298C28.0917 22.8814 28.2857 23.033 28.4811 23.1773C28.5482 23.2269 28.5438 23.3304 28.4709 23.3727C27.5492 23.9076 26.591 24.3595 25.5832 24.737C25.5176 24.7618 25.4884 24.8376 25.5205 24.9003C26.0761 25.9687 26.7106 26.9862 27.4091 27.9512C27.4383 27.992 27.4908 28.0095 27.5389 27.9949C30.5622 27.0664 33.6278 25.6655 36.7925 23.3581C36.8203 23.3377 36.8378 23.3071 36.8407 23.2735C37.6122 15.3496 35.5485 8.46657 31.3702 2.36477C31.3599 2.34438 31.3425 2.32979 31.3221 2.32105ZM12.3642 19.0988C10.5411 19.0988 9.039 17.4371 9.039 15.3963C9.039 13.3556 10.512 11.6939 12.3642 11.6939C14.2309 11.6939 15.7185 13.3702 15.6894 15.3963C15.6894 17.4371 14.2163 19.0988 12.3642 19.0988ZM24.6586 19.0988C22.8356 19.0988 21.3334 17.4371 21.3334 15.3963C21.3334 13.3556 22.8064 11.6939 24.6586 11.6939C26.5254 11.6939 28.0129 13.3702 27.9838 15.3963C27.9838 17.4371 26.5254 19.0988 24.6586 19.0988Z")
+
+            symbol#icon-facebook(viewBox="0 0 14 29" fill="currentColor")
+                path(d="M2.9619 28.3456C2.96773 28.2549 2.96773 28.1639 2.9619 28.0732V14.1373H0.0996094V9.28278H3.02103V8.91573C3.02103 7.82643 3.02103 6.73712 3.02103 5.64782C3.0295 4.44737 3.35608 3.27066 3.9673 2.23782C4.54355 1.29566 5.46444 0.61595 6.5339 0.343413C7.16071 0.153016 7.80788 0.0377078 8.46183 0C10.0467 0 11.6435 0 13.1929 0V4.85454H12.8972H10.2597C10.076 4.86385 9.89369 4.89162 9.71556 4.93743C9.47053 4.98974 9.2514 5.12593 9.09595 5.32261C8.9405 5.5193 8.85842 5.76412 8.86393 6.01486C8.86393 7.0568 8.86393 8.1224 8.86393 9.17618C8.86393 9.17618 8.86393 9.17618 8.86393 9.24722H13.252L12.7316 14.1373H8.81664V28.014C8.81664 28.1324 8.81664 28.2508 8.81664 28.3692L2.9619 28.3456Z")
+
+            symbol#icon-medium(viewBox="0 0 37 20" fill="currentColor")
+                path(d="M20.4271 9.98052C20.4271 15.4924 15.8952 19.9607 10.305 19.9607C4.71491 19.9607 0.182617 15.4924 0.182617 9.98052C0.182617 4.4686 4.71457 0 10.305 0C15.8955 0 20.4271 4.4686 20.4271 9.98052Z")
+                path(d="M31.5308 9.98084C31.5308 15.1691 29.2648 19.3767 26.4696 19.3767C23.6744 19.3767 21.4084 15.1691 21.4084 9.98084C21.4084 4.79256 23.674 0.584961 26.4693 0.584961C29.2645 0.584961 31.5305 4.79122 31.5305 9.98084")
+                path(d="M36.0735 9.98096C36.0735 14.6284 35.2767 18.3982 34.2935 18.3982C33.3103 18.3982 32.5138 14.6294 32.5138 9.98096C32.5138 5.33252 33.3106 1.56372 34.2935 1.56372C35.2764 1.56372 36.0735 5.33218 36.0735 9.98096Z")
+
+            symbol#icon-telegram(viewBox="0 0 32 28" fill="currentColor")
+                path(d="M1.14097 14.0244L8.21166 16.3297L10.9126 24.9823C11.24 25.9292 11.0763 26.3049 12.0322 26.3049C12.7689 26.3049 13.0962 25.9548 13.5055 25.5365C13.7657 25.2701 15.3126 23.7016 17.0404 21.9504L24.3943 27.6189C25.7472 28.3976 26.7244 27.9938 27.0616 26.3075L31.8906 2.5763C32.3816 0.509198 31.1351 -0.428299 29.8444 0.185599L1.49373 11.5876C-0.441113 12.397 -0.428836 13.5223 1.14097 14.0244ZM25.2561 5.30939C26.0517 4.80649 26.7809 5.07715 26.1826 5.63128L12.5372 18.4745L12.006 24.3864L9.32067 15.7978L25.2561 5.30939Z")
+
+            symbol#icon-twitter(viewBox="0 0 34 28" fill="currentColor")
+                path(d="M32.7987 3.75354C30.7121 4.48962 30.4542 4.39615 31.4506 3.27451C32.2111 2.52536 32.7921 1.61477 33.1503 0.610619C33.1503 0.528832 32.7869 0.610618 32.3649 0.879344C31.6717 1.22139 30.9501 1.50286 30.2081 1.72057L28.8835 2.14119L27.7112 1.32333C27.061 0.880596 26.3607 0.515879 25.6247 0.23674C24.2072 -0.107976 22.7237 -0.0757453 21.3226 0.330209C19.8531 0.833346 18.5897 1.80283 17.7259 3.09011C16.862 4.37739 16.4455 5.91147 16.54 7.45729L16.6103 8.62566L15.4381 8.48545C10.9937 7.93662 6.86427 5.91162 3.71594 2.73706L2.08656 1.1247L1.67627 2.29308C1.22547 3.53514 1.12924 4.87751 1.39828 6.17084C1.66731 7.46417 2.29107 8.65774 3.20016 9.61877C4.18482 10.6586 3.9621 10.7871 2.26238 10.1913C1.67627 9.99266 1.1605 9.84077 1.09016 9.92255C1.16123 11.0718 1.46003 12.1956 1.96933 13.229C2.75459 14.5937 3.92434 15.6986 5.33359 16.407L6.50581 16.9678H5.07571C3.70421 16.9678 3.65733 16.9678 3.79799 17.517C4.2307 18.4808 4.86423 19.3419 5.65649 20.0429C6.44875 20.7439 7.38161 21.2689 8.39308 21.5829L9.91697 22.097L8.59236 22.8915C6.58128 24.0339 4.31843 24.664 2.0045 24.7258C1.33015 24.6925 0.654563 24.7594 0 24.9245C1.45544 25.86 3.03323 26.5912 4.68887 27.0976C7.36044 27.9114 10.1694 28.1787 12.9472 27.8836C15.725 27.5884 18.4143 26.7369 20.8538 25.3801C24.489 23.0665 27.3467 19.7217 29.0593 15.7761C29.9907 13.4016 30.5558 10.9002 30.7356 8.35693C30.7356 7.18856 30.8059 7.06004 32.1774 5.70473C32.8046 5.11946 33.381 4.48238 33.9005 3.80028C34.1115 3.33293 34.0881 3.33293 32.7987 3.75354Z")
+
+            symbol#icon-instagram(viewBox="0 0 30 30" fill="currentColor")
+                g(clip-path="url(#clip0_0_3611)")
+                    path(fill-rule="evenodd", clip-rule="evenodd", d="M24.807 6.99305C24.807 7.98727 24.0009 8.79305 23.007 8.79305C22.013 8.79305 21.207 7.98727 21.207 6.99305C21.207 5.99883 22.013 5.19305 23.007 5.19305C24.0012 5.19305 24.807 5.99883 24.807 6.99305ZM15 19.9999C12.2386 19.9999 10.0001 17.7614 10.0001 15C10.0001 12.2386 12.2386 10.0001 15 10.0001C17.7614 10.0001 19.9999 12.2386 19.9999 15C19.9999 17.7614 17.7614 19.9999 15 19.9999ZM15 7.29727C10.7459 7.29727 7.29727 10.7459 7.29727 15C7.29727 19.2541 10.7459 22.7027 15 22.7027C19.2541 22.7027 22.7027 19.2541 22.7027 15C22.7027 10.7459 19.2541 7.29727 15 7.29727ZM15 2.70281C19.0052 2.70281 19.4796 2.71805 21.0612 2.79023C22.5237 2.85703 23.318 3.10125 23.8465 3.3068C24.5466 3.57891 25.0462 3.90398 25.5712 4.42898C26.0962 4.95375 26.4213 5.45344 26.6934 6.15375C26.8988 6.68227 27.1432 7.47656 27.21 8.93906C27.2822 10.5209 27.2974 10.9952 27.2974 15.0005C27.2974 19.0057 27.2822 19.4801 27.21 21.0616C27.1432 22.5241 26.899 23.3184 26.6934 23.847C26.4213 24.547 26.0962 25.0467 25.5712 25.5717C25.0465 26.0967 24.5468 26.4218 23.8465 26.6939C23.318 26.8992 22.5237 27.1437 21.0612 27.2105C19.4796 27.2827 19.0052 27.2979 15 27.2979C10.9945 27.2979 10.5202 27.2827 8.93859 27.2105C7.47609 27.1437 6.6818 26.8995 6.15328 26.6939C5.4532 26.4218 4.95352 26.0967 4.42852 25.5717C3.90375 25.047 3.57844 24.5473 3.30633 23.847C3.10102 23.3184 2.85656 22.5241 2.78977 21.0616C2.71758 19.4798 2.70234 19.0055 2.70234 15.0005C2.70234 10.9952 2.71758 10.5209 2.78977 8.93906C2.85656 7.47656 3.10078 6.68227 3.30633 6.15375C3.57844 5.45367 3.90352 4.95398 4.42852 4.42898C4.95328 3.90398 5.45297 3.57891 6.15328 3.3068C6.6818 3.10148 7.47609 2.85703 8.93859 2.79023C10.5204 2.71805 10.9948 2.70281 15 2.70281Z", fill="currentColor")
+                defs
+                    clipPath#clip0_0_3611
+                        rect(width="30", height="30", fill="white")
+
+            symbol#icon-google-play(viewBox="0 0 30 32" fill="currentColor")
+                path(d="M21.9009 9.52052L4.85571 0.395006C3.96993 -0.0791828 3.00946 -0.103417 2.17816 0.199665L16.6999 14.7214L21.9009 9.52052Z", fill="currentColor")
+                path(d="M28.2581 12.9231L23.3482 10.2946L17.8112 15.8315L23.3482 21.3685L28.258 18.7399C30.5806 17.4965 30.5806 14.1665 28.2581 12.9231Z", fill="currentColor")
+                path(d="M0.849077 1.09082C0.328275 1.66322 0 2.42739 0 3.30293V28.3601C0 29.2357 0.328275 29.9999 0.849013 30.5723L15.5898 15.8315L0.849077 1.09082Z", fill="currentColor")
+                path(d="M2.17816 31.4647C3.0094 31.7677 3.96993 31.7436 4.85571 31.2693L21.9009 22.1438L16.7 16.9429L2.17816 31.4647Z", fill="currentColor")
+
+
+            symbol#icon-certik(viewBox="0 0 132.57 34" fill="none")
+                path#Vektor1(d="M15.52 1.39L5.44 4.47L5.44 4.47C5.35 4.49 5.26 4.5 5.17 4.49C5.08 4.49 4.99 4.46 4.91 4.42C4.84 4.38 4.77 4.32 4.71 4.25C4.65 4.18 4.61 4.1 4.58 4.01C4.56 3.93 4.55 3.84 4.56 3.75C4.57 3.66 4.59 3.57 4.63 3.49C4.68 3.42 4.73 3.35 4.8 3.29C4.87 3.23 4.95 3.19 5.04 3.16L15.32 0.02C15.45 -0.01 15.59 -0.01 15.72 0.02L26.23 3.23C26.4 3.29 26.54 3.4 26.63 3.56C26.71 3.72 26.73 3.91 26.68 4.08C26.62 4.25 26.51 4.4 26.35 4.48C26.19 4.57 26 4.59 25.83 4.54L15.52 1.39ZM0.21 6.07L0.38 5.04C0.38 4.99 0.39 4.94 0.41 4.88C0.44 4.8 0.48 4.72 0.54 4.65C0.6 4.58 0.67 4.52 0.75 4.48C0.83 4.44 0.91 4.42 1 4.41C1.09 4.4 1.18 4.41 1.27 4.44C1.35 4.47 1.43 4.52 1.5 4.57C1.56 4.62 1.6 4.68 1.64 4.74C1.65 4.76 1.66 4.78 1.67 4.8L7.73 16.62L23.45 16.62C23.53 16.62 23.6 16.63 23.66 16.65L23.73 16.52L29.37 4.79C29.45 4.63 29.59 4.51 29.75 4.45C29.78 4.44 29.81 4.44 29.83 4.43C29.85 4.43 29.86 4.43 29.87 4.42C29.96 4.41 30.05 4.41 30.14 4.43C30.23 4.45 30.31 4.49 30.38 4.54C30.45 4.6 30.52 4.66 30.56 4.74C30.61 4.81 30.64 4.9 30.66 4.99L30.83 6.07C30.99 7.15 31.06 8.24 31.05 9.33C31.05 11.69 30.76 14.03 30.2 16.32C29.44 19.45 28.11 22.4 26.28 25.05C24.16 28.09 21.09 31.09 16.68 33.46L15.85 33.91C15.75 33.97 15.64 34 15.52 34C15.45 34 15.37 33.98 15.3 33.96C15.25 33.94 15.2 33.92 15.16 33.89L14.36 33.46C9.95 31.09 6.88 28.09 4.77 25.05C2.94 22.4 1.61 19.44 0.84 16.32C0.28 14.03 0 11.68 0 9.33C-0.02 8.24 0.06 7.15 0.21 6.07ZM22.95 17.97L8.42 17.97L15.54 31.85L22.95 17.97ZM1.35 9.33C1.35 8.65 1.37 7.98 1.43 7.31L13.9 31.64C10.27 29.48 7.7 26.89 5.88 24.27C4.14 21.76 2.88 18.95 2.16 15.99C1.63 13.81 1.36 11.57 1.35 9.33ZM25.16 24.27C23.35 26.88 20.8 29.45 17.2 31.6L24.93 17.14L24.95 17.12L29.61 7.41C29.67 8.05 29.69 8.69 29.68 9.33C29.68 11.57 29.41 13.81 28.88 15.99C28.15 18.95 26.89 21.76 25.16 24.27Z", fill="currentColor", fill-opacity="1.000000", fill-rule="evenodd")
+                path#Vektor2(d="M68.83 19.63L68.83 18.35L58.49 18.35L58.49 29.69L68.83 29.69L68.83 28.41L59.77 28.41L59.77 24.66L67.06 24.66L67.06 23.37L59.77 23.37L59.77 19.63L68.83 19.63ZM105.6 18.35L94.27 18.35L94.27 19.63L99.31 19.63L99.31 29.69L100.59 29.69L100.59 19.63L105.6 19.63L105.6 18.35ZM112.47 18.35L112.47 29.69L113.75 29.69L113.75 18.35L112.47 18.35ZM132.39 18.35L130.75 18.35L126.54 23.37L122.89 23.37L122.89 18.35L121.6 18.35L121.6 29.69L122.89 29.69L122.89 24.66L126.54 24.66L130.75 29.69L132.41 29.69L127.66 24.02L132.39 18.35ZM51.16 19.63L41.75 19.63C41.58 19.63 41.43 19.69 41.31 19.81C41.2 19.92 41.13 20.08 41.13 20.24L41.13 27.8C41.13 27.96 41.2 28.12 41.31 28.23C41.43 28.35 41.58 28.41 41.75 28.41L51.16 28.41L51.16 29.69L41.75 29.69C41.5 29.69 41.25 29.64 41.02 29.55C40.79 29.46 40.58 29.32 40.41 29.14C40.23 28.97 40.09 28.76 40 28.53C39.91 28.3 39.86 28.05 39.86 27.8L39.86 20.25C39.86 20 39.91 19.75 40 19.52C40.09 19.29 40.23 19.09 40.41 18.91C40.58 18.73 40.79 18.6 41.02 18.5C41.25 18.41 41.5 18.36 41.75 18.36L51.16 18.36L51.16 19.63ZM87.5 23.58L87.5 20.26L87.49 20.26C87.49 20.01 87.45 19.76 87.35 19.53C87.26 19.3 87.12 19.1 86.94 18.92C86.77 18.74 86.56 18.61 86.33 18.51C86.1 18.42 85.85 18.37 85.6 18.37L76.16 18.37L76.16 29.69L77.44 29.69L77.44 25.4C77.64 25.44 77.85 25.46 78.05 25.47L82.21 25.47L85.76 29.69L87.44 29.69L83.88 25.47L85.61 25.47C85.86 25.47 86.11 25.42 86.34 25.33C86.57 25.23 86.78 25.09 86.95 24.92C87.13 24.74 87.27 24.53 87.36 24.3C87.46 24.07 87.5 23.83 87.5 23.58ZM85.61 24.18L78.06 24.18C77.98 24.18 77.9 24.16 77.82 24.13C77.75 24.11 77.68 24.06 77.62 24.01C77.57 23.95 77.52 23.89 77.49 23.81C77.46 23.74 77.44 23.66 77.44 23.58L77.44 20.26C77.44 20.1 77.51 19.94 77.62 19.82C77.74 19.71 77.9 19.64 78.06 19.64L85.61 19.64C85.69 19.64 85.77 19.66 85.85 19.69C85.92 19.72 85.99 19.77 86.04 19.82C86.1 19.88 86.14 19.95 86.17 20.02C86.2 20.1 86.21 20.18 86.21 20.26L86.21 23.58C86.21 23.66 86.2 23.74 86.17 23.81C86.14 23.88 86.1 23.95 86.04 24C85.98 24.06 85.92 24.1 85.84 24.13C85.77 24.16 85.69 24.18 85.61 24.18Z", fill="currentColor", fill-opacity="1.000000", fill-rule="evenodd")
+                path#AUDITEDBY(d="M54.42 7.06L57.54 7.06L58.21 8.55L58.84 8.55L56.28 2.95L55.69 2.95L53.13 8.55L53.75 8.55L54.42 7.06ZM62.57 8.16Q63.14 8.6 64.06 8.6Q64.98 8.6 65.56 8.15Q65.66 8.07 65.75 7.98Q65.76 7.97 65.77 7.96Q66.36 7.33 66.36 6.16L66.36 2.95L65.78 2.95L65.78 6.14Q65.78 7.11 65.34 7.59Q65.28 7.66 65.21 7.71Q64.79 8.07 64.06 8.07Q63.35 8.07 62.93 7.72Q62.85 7.66 62.79 7.59Q62.35 7.11 62.35 6.14L62.35 2.95L61.76 2.95L61.76 6.16Q61.76 7.33 62.34 7.95Q62.35 7.97 62.36 7.98Q62.46 8.08 62.57 8.16ZM72.58 2.95L70.3 2.95L70.3 8.55L72.58 8.55Q73.47 8.55 74.15 8.2Q74.58 7.97 74.89 7.63Q75.07 7.44 75.2 7.2Q75.26 7.1 75.31 7Q75.58 6.44 75.58 5.75Q75.58 5.07 75.32 4.52Q75.27 4.41 75.2 4.3Q75.06 4.06 74.88 3.86Q74.57 3.53 74.15 3.31Q73.47 2.95 72.58 2.95ZM79.66 2.95L79.07 2.95L79.07 8.55L79.66 8.55L79.66 2.95ZM82.76 3.46L84.73 3.46L84.73 8.55L85.33 8.55L85.33 3.46L87.29 3.46L87.29 2.95L82.76 2.95L82.76 3.46ZM94.36 8.55L94.36 8.04L90.99 8.04L90.99 5.96L93.89 5.96L93.89 5.46L90.99 5.46L90.99 3.46L94.24 3.46L94.24 2.95L90.4 2.95L90.4 8.55L94.36 8.55ZM100.19 2.95L97.91 2.95L97.91 8.55L100.19 8.55Q101.08 8.55 101.76 8.2Q102.19 7.97 102.5 7.63Q102.68 7.44 102.81 7.2Q102.87 7.1 102.92 7Q103.19 6.44 103.19 5.75Q103.19 5.07 102.93 4.52Q102.88 4.41 102.81 4.3Q102.67 4.06 102.49 3.86Q102.18 3.53 101.76 3.31Q101.08 2.95 100.19 2.95ZM115.27 6.1Q114.98 5.78 114.46 5.66Q114.77 5.54 114.97 5.32Q115.04 5.26 115.09 5.18Q115.11 5.15 115.13 5.12Q115.32 4.81 115.32 4.39Q115.32 3.99 115.14 3.69Q115.01 3.48 114.8 3.33Q114.29 2.95 113.35 2.95L110.93 2.95L110.93 8.55L113.51 8.55Q114.55 8.55 115.08 8.17Q115.29 8.01 115.42 7.81Q115.61 7.49 115.61 7.06Q115.61 6.57 115.39 6.24Q115.35 6.19 115.31 6.14Q115.29 6.12 115.27 6.1ZM120.93 8.55L120.93 6.62L123.17 2.95L122.57 2.95L120.65 6.1L118.73 2.95L118.1 2.95L120.34 6.62L120.34 8.55L120.93 8.55ZM111.53 5.47L111.53 3.44L113.31 3.44Q113.99 3.44 114.36 3.7Q114.5 3.8 114.59 3.94Q114.72 4.15 114.72 4.46Q114.72 4.76 114.59 4.98Q114.5 5.11 114.36 5.21Q113.99 5.47 113.31 5.47L111.53 5.47ZM73.84 7.75Q73.29 8.04 72.55 8.04L70.89 8.04L70.89 3.46L72.55 3.46Q73.29 3.46 73.84 3.76Q74.19 3.94 74.45 4.23Q74.58 4.38 74.69 4.56Q74.72 4.62 74.75 4.67Q75 5.15 75 5.75Q75 6.35 74.76 6.82Q74.73 6.88 74.69 6.94Q74.59 7.12 74.45 7.27Q74.2 7.56 73.84 7.75ZM101.45 7.75Q100.89 8.04 100.16 8.04L98.5 8.04L98.5 3.46L100.16 3.46Q100.89 3.46 101.45 3.76Q101.8 3.94 102.05 4.23Q102.19 4.38 102.3 4.56Q102.33 4.62 102.36 4.67Q102.61 5.15 102.61 5.75Q102.61 6.35 102.36 6.82Q102.33 6.88 102.3 6.94Q102.19 7.12 102.06 7.27Q101.8 7.56 101.45 7.75ZM55.98 3.57L57.32 6.58L54.64 6.58L55.98 3.57ZM114.64 7.81Q114.25 8.06 113.5 8.06L111.53 8.06L111.53 5.96L113.5 5.96Q114.53 5.96 114.86 6.44Q115.02 6.67 115.02 7.01Q115.02 7.38 114.84 7.61Q114.76 7.73 114.64 7.81Z", fill="currentColor", fill-opacity="1.000000", fill-rule="evenodd")
+                path#Vector3(d="M43.45 1.88L46.9 2.75C47.09 2.79 47.23 2.99 47.23 3.21L47.23 7.92C47.23 8.87 46.81 9.76 46.11 10.28L43.45 12.28L40.8 10.28C40.09 9.76 39.67 8.87 39.67 7.93L39.67 3.21C39.67 2.99 39.81 2.79 40 2.75L43.45 1.88Z", fill="#7156FB", fill-opacity="1.000000", fill-rule="nonzero")
+                path#Vector4(d="M41.56 6.76L43.11 8.21L45.81 5.66", stroke="currentColor", stroke-opacity="1.000000", stroke-width="1.336500")
+
+        header.header
+            .header__inner.container
+                a.header__logo.logo(href="/", aria-label="Home", title="Home")
+                    img.logo__image(
+                        src="./assets/images/icons/logo.svg",
+                        alt="",
+                        width="92",
+                        height="58"
+                    )
+                nav.header__menu
+                    ul.header__menu-inner
+                        li.header__menu-item
+                            a.header__menu-link(href="https://cheelee.us/en/company.html", data-i18n="web_menu_about-us") About us
+                        li.header__menu-item
+                            a.header__menu-link(href="#", data-i18n="web_menu_roadmap") Roadmap
+                        li.header__menu-item
+                            a.header__menu-link(href="#", data-i18n="web_menu_documents") Documents
+                        li.header__menu-item
+                            a.header__menu-link(href="https://intercom.help/cheelee/en", data-i18n="web_menu_faq") F.A.Q.
+                        li.header__menu-item
+                            a.header__menu-link.bold-link(href="#", data-i18n="web_menu_buy-nft") Buy NFT glasses
+                .header__right-column
+                    .rates
+                        .rates__wrapper
+                            img.rates__icon(
+                                src="./assets/images/icons/icon-cheel.png",
+                                srcset="./assets/images/icons/icon-cheel@2x.png 2x",
+                                alt="rates icon"
+                            )
+                            .rates__inner
+                                h3.rates__title Cheel
+                                a.rates__common(href="#", target="_blank")
+                                    span.rates__currency $
+                                    span.rates__value 8,00
+                                    span.rates__arrow.rate-rise
+                        .rates__wrapper
+                            img.rates__icon(
+                                src="./assets/images/icons/icon-lee.png",
+                                srcset="./assets/images/icons/icon-lee@2x.png 2x",
+                                alt="rates icon"
+                            )
+                            .rates__inner
+                                h3.rates__title Lee
+                                a.rates__common(href="#", target="_blank")
+                                    span.rates__currency $
+                                    span.rates__value 7,00
+                                    span.rates__arrow.rate-fall
+                    a.header__button.button-purple(href="https://www.certik.com/projects/cheelee", target="_blank")
+                        svg.icon-certik(width="132", height="34")
+                            use(href="#icon-certik")
+                    .dropdown
+                        .dropdown__title(id="language-text") EN
+                        .dropdown__inner(id="dropdown-menu")
+                            .dropdown__value(data-lang="en") Eng
+                            .dropdown__value(data-lang="ru") Rus
+        main.main
+            .container
+                section.hero
+                    .hero__left-column
+                        section
+                            h1.hero__title
+                                | GameFi short video
+                                span.accent-green platform
+                            span.hero__subtitle Watch. Play. Earn
+                        .hero__store-wrapper
+                            .social-button
+                                a.hero__social-link(href="#")
+                                    svg.icon-google-play(width="30" height="32")
+                                        use(href="#icon-google-play")
+                            span.hero__store-text Pre-registration in Google Play
+                    .hero__social
+                        ul.hero__social-list
+                            li.hero__social-item.social-button
+                                a.hero__social-link(href="https://discord.gg/cheeleeone" target="_blank")
+                                    svg.icon-discord(width="37" height="28")
+                                        use(href="#icon-discord")
+                            li.hero__social-item.social-button
+                                a.hero__social-link(href="https://www.instagram.com/cheelee.global" target="_blank")
+                                    svg.icon-telegram(width="32" height="28")
+                                        use(href="#icon-telegram")
+                            li.hero__social-item.social-button
+                                a.hero__social-link(href="https://twitter.com/Cheelee_Tweet" target="_blank")
+                                    svg.icon-twitter(width="34" height="28")
+                                        use(href="#icon-twitter")
+                            li.hero__social-item.social-button
+                                a.hero__social-link(href="#" target="_blank")
+                                    svg.icon-facebook(width="14" height="29")
+                                        use(href="#icon-facebook")
+                            li.hero__social-item.social-button
+                                a.hero__social-link(href="#" target="_blank")
+                                    svg.icon-instagram(width="30" height="30")
+                                        use(href="#icon-instagram")
+                            li.hero__social-item.social-button
+                                a.hero__social-link(href="#" target="_blank")
+                                    svg.icon-medium(width="37" height="20")
+                                        use(href="#icon-medium")
+                section.mission
+                    h2.mission__title
+                        span.accent-green Cheelee’s
+                        |  mission
+                    .mission__main-text
+                        p.mission__text Users spend an average of 2.5 hours daily on social networks and get nothing fоr it. We believe that this is unfair
+                        p.mission__text Our mission is to provide everyone with the opportunity to monetize time in social networks
+                    h3.mission__additional-title
+                        span.accent-green Cheelee
+                        |  works within the "Attention Economy" framework
+                    .mission__additional-text
+                        p.mission__text
+                            | Other social media consider a user as an information and advertising influence target,
+                            span.accent-gray but a Cheelee user is a full system member, partner and beneficiary
+                        p.mission__text
+                            span.accent-gray The Attention Economy
+                            |  sees human attention as a scarce commodity making it a new oil! The founder of this concept is the Nobel laureate Herbert Simon
+                        p.mission__text The main idea is that attention is converted into income with digital platforms. You pay your attention to what you want, and get paid for it. Your attention has a certain cost.
+                        p.mission__text Through the GameFi mechanics, Cheelee’s users earn together with the platform by converting their attention into money
+                section.steps
+                    .steps__inner
+                        .steps__left-column
+                            .steps__card
+                                h3.steps__card-title
+                                    | Sign-up and get
+                                    br
+                                    | your
+                                    span.accent-green free NFT glasses
+                            .steps__card
+                                h3.steps__card-title
+                                    | Watch the feed
+                                    br
+                                    | and get the boxes
+                                    span.accent-green with&nbsp;LEE tokens
+                            .steps__image-wrapper
+                                img.steps__image(
+                                    src="./assets/images/steps-image.png",
+                                    srcset="./assets/images/steps-image@2x.png 2x",
+                                    alt="steps image"
+                                )
+                        .steps__right-colum
+                            .steps__card
+                                h3.steps__card-title
+                                    | Buy your NFT glasses and
+                                    span.accent-green get LEE tokens
+                                    | directly when watching the feed
+                                p.steps__card-text
+                                    | The higher the rarity of your
+                                    span.accent-green NFT glasses
+                                    | , the more points you get when leveling them up – the more tokens you can earn
+                            .steps__card-group
+                                .steps__card
+                                    h3.steps__card-title
+                                        | Upgrade your
+                                        br
+                                        span.accent-green NFT glasses
+                                .steps__card
+                                    h3.steps__card-title
+                                        span.accent-green Buy additional
+                                        br
+                                        | NFT glasses
+                                        br
+                                        | to increase the amount of Attention and rewarded time of watching the feed
+                                    p.steps__card-text
+                                        | 1 Attention =
+                                        span.accent-gray 10 minutes
+                                        |  of rewarded feed viewing
+                section.boxes
+                    .boxes__inner
+                        h2.boxes__title
+                            | Watch the videos and
+                            span.accent-green get the boxes
+                        p.boxes__subtitle
+                            | While watching the feed you can get boxes
+                            br
+                            | with NFT or LEE tokens
+                    img.boxes__image(
+                        src="./assets/images/box-image.png",
+                        srcset="./assets/images/box-image@2x.png 2x",
+                        alt="box image"
+                    )
+                section.presale-banner
+                    h2.presale-banner__title
+                        | Don’t miss the
+                        span.accent-green Presale
+                    button.presale-banner__button.button-purple Buy NFT glasses
+                section.product
+                    .product__inner
+                        h2.product__title
+                            | Cheelee team has
+                            br
+                            span.accent-green already launched
+                            br
+                            | product
+                        p.product__subtitle
+                            | The project is based on the already launched in 2021 short video platform – NUTSon
+                            | (1.5M users, 33% engagement rate and 15K videos created daily)
+                    img.product__image(
+                        src="./assets/images/product-image.png",
+                        srcset="./assets/images/product-image@2x.png 2x",
+                        alt="product image"
+                    )
+        script(src="script.js" type="text/javascript")

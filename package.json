@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "pug": "^3.0.3"
+  },
+  "scripts": {
+    "pug:watch": "pug --watch index.pug"
+  }
+}
