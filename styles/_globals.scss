@@ -8,8 +8,10 @@ a {
   &[class] {
     text-decoration: none;
 
-    &:hover {
-      color: var(--color-green);
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-green);
+      }
     }
   }
 }
@@ -48,9 +50,11 @@ $headings: h1, h2, h3, h4, h5, h6;
   border: 0.0625rem solid transparent;
   border-radius: 1.25rem;
 
-  &:hover {
-    border-color: var(--color-green);
-    background-color: var(--color-purple-opacity);
+  @media (hover: hover) {
+    &:hover {
+      border-color: var(--color-green);
+      background-color: var(--color-purple-opacity);
+    }
   }
 }
 
@@ -64,6 +68,12 @@ $headings: h1, h2, h3, h4, h5, h6;
   background-color: var(--color-purple);
   border-color: transparent;
   color: var(--color-gray);
+
+  @media (hover: hover) {
+    &:not(.header__button):hover {
+      background-color: var(--color-green);
+    }
+  }
 }
 
 .rate-rise {
@@ -110,8 +120,10 @@ $headings: h1, h2, h3, h4, h5, h6;
     padding: 10px;
     cursor: pointer;
 
-    &:hover {
-      color: var(--color-green);
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-green);
+      }
     }
   }
 }

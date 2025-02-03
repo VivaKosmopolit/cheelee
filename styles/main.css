@@ -228,8 +228,10 @@ a {
 a[class] {
   text-decoration: none;
 }
-a[class]:hover {
-  color: var(--color-green);
+@media (hover: hover) {
+  a[class]:hover {
+    color: var(--color-green);
+  }
 }
 
 h1 {
@@ -300,9 +302,11 @@ h6:has(.accent-green) span.accent-green {
   border: 0.0625rem solid transparent;
   border-radius: 1.25rem;
 }
-.social-button:hover {
-  border-color: var(--color-green);
-  background-color: var(--color-purple-opacity);
+@media (hover: hover) {
+  .social-button:hover {
+    border-color: var(--color-green);
+    background-color: var(--color-purple-opacity);
+  }
 }
 
 .button-purple {
@@ -315,6 +319,11 @@ h6:has(.accent-green) span.accent-green {
   background-color: var(--color-purple);
   border-color: transparent;
   color: var(--color-gray);
+}
+@media (hover: hover) {
+  .button-purple:not(.header__button):hover {
+    background-color: var(--color-green);
+  }
 }
 
 .rate-rise {
@@ -358,8 +367,10 @@ h6:has(.accent-green) span.accent-green {
   padding: 10px;
   cursor: pointer;
 }
-.dropdown__value:hover {
-  color: var(--color-green);
+@media (hover: hover) {
+  .dropdown__value:hover {
+    color: var(--color-green);
+  }
 }
 
 .show {
@@ -434,6 +445,7 @@ h6:has(.accent-green) span.accent-green {
 
 .main {
   background-color: var(--color-dark-purple);
+  overflow: hidden;
 }
 
 .hero {
@@ -449,10 +461,10 @@ h6:has(.accent-green) span.accent-green {
   width: fit-content;
 }
 .hero__title {
-  max-width: 21.75rem;
   font-size: 3.5rem;
   font-weight: 900;
   line-height: 4.25rem;
+  max-width: 21.75rem;
 }
 .hero__subtitle {
   font-size: 1.625rem;
@@ -494,16 +506,16 @@ h6:has(.accent-green) span.accent-green {
   padding-bottom: 6.25rem;
 }
 .mission__title {
-  margin-bottom: 2.5rem;
   font-size: 4.5rem;
   font-weight: 900;
   line-height: 5.5rem;
+  margin-bottom: 2.5rem;
 }
 .mission__additional-title {
-  margin: 2.5rem 0;
   font-size: 1.625rem;
-  line-height: 2.375rem;
   font-weight: 700;
+  line-height: 2.375rem;
+  margin: 2.5rem 0;
 }
 .mission__main-text {
   font-size: 1.625rem;
@@ -516,6 +528,7 @@ h6:has(.accent-green) span.accent-green {
 }
 .mission__additional-text {
   font-size: 1.125rem;
+  font-weight: 400;
   line-height: 2.0625rem;
 }
 .mission__text {
@@ -557,11 +570,13 @@ h6:has(.accent-green) span.accent-green {
   font-size: 1.625rem;
   font-weight: 700;
   line-height: 2.375rem;
+  line-height: 2.375rem;
 }
 .steps__card-text {
-  margin-top: 0.625rem;
   font-size: 1.125rem;
+  font-weight: 400;
   line-height: 2.0625rem;
+  margin-top: 0.625rem;
   color: var(--color-gray);
 }
 .steps__image-wrapper {
@@ -579,13 +594,14 @@ h6:has(.accent-green) span.accent-green {
   grid-column: span 2;
 }
 .boxes__title {
-  margin-bottom: 1.25rem;
   font-size: 4.5rem;
   font-weight: 900;
   line-height: 5.5rem;
+  margin-bottom: 1.25rem;
 }
 .boxes__subtitle {
   font-size: 1.125rem;
+  font-weight: 400;
   line-height: 2.0625rem;
   color: var(--color-gray);
 }
@@ -603,8 +619,8 @@ h6:has(.accent-green) span.accent-green {
 }
 .presale-banner__title {
   font-size: 1.625rem;
-  line-height: 2.375rem;
   font-weight: 700;
+  line-height: 2.375rem;
 }
 
 .product {
@@ -621,12 +637,13 @@ h6:has(.accent-green) span.accent-green {
 }
 .product__title {
   font-size: 1.625rem;
-  line-height: 2.375rem;
   font-weight: 700;
+  line-height: 2.375rem;
   margin-bottom: 1.25rem;
 }
 .product__subtitle {
   font-size: 1.125rem;
+  font-weight: 400;
   line-height: 2.0625rem;
   color: var(--color-gray);
 }
